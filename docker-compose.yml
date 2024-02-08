@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  caca:
+    image: postgres:latest
+    container_name: caca
+    environment:
+      POSTGRES_DB: arosaje
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
